@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollTop": -221,
+    "scrollLeft": -517,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -143,7 +143,7 @@
           "active": false,
           "left": 174,
           "top": 98,
-          "zIndex": 100,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 84.5703125,
           "color": "#FFC107"
@@ -229,7 +229,7 @@
           "active": false,
           "left": 770,
           "top": 107,
-          "zIndex": 92,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 97.5703125,
           "color": "#4CAF50"
@@ -311,29 +311,6 @@
             "id": "d3ae5085-924e-498d-9a59-86a527228e77"
           },
           {
-            "name": "price",
-            "comment": "상품 가격",
-            "dataType": "INT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "c6cdc89c-9dc7-468e-ad77-e9083ee02484"
-          },
-          {
             "name": "product_image",
             "comment": "상품 이미지",
             "dataType": "TEXT",
@@ -401,13 +378,82 @@
               "widthDefault": 60
             },
             "id": "b8897246-5a8c-4e59-a20b-ec1bf759af3f"
+          },
+          {
+            "name": "cheapest_product1",
+            "comment": "상품가격",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 112.931640625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d7d9c9e0-1b49-4797-ade6-7f157cc296f6"
+          },
+          {
+            "name": "cheapest_product1",
+            "comment": "사이트 가격1",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 112.931640625,
+              "widthComment": 78.73046875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8629b180-cdcb-4a0d-b70e-2eef9e69f3fa"
+          },
+          {
+            "name": "cheapest_image1",
+            "comment": "사이트 로고 이미지1",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 103.13720703125,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "eeb73e21-ce39-467a-9896-d0c29f7c3faf"
           }
         ],
         "ui": {
           "active": false,
-          "left": 780,
-          "top": 362,
-          "zIndex": 112,
+          "left": 789,
+          "top": 376,
+          "zIndex": 381,
           "widthName": 60,
           "widthComment": 71.5703125,
           "color": "#009688"
@@ -537,9 +583,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 383,
-          "top": 610,
-          "zIndex": 115,
+          "left": 169,
+          "top": 572,
+          "zIndex": 373,
           "widthName": 60,
           "widthComment": 71.5703125,
           "color": "#03A9F4"
@@ -602,7 +648,7 @@
           "active": false,
           "left": 193,
           "top": 406,
-          "zIndex": 99,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 115.140625,
           "color": "#E91E63"
@@ -663,15 +709,239 @@
         ],
         "ui": {
           "active": false,
-          "left": 1150,
-          "top": 700,
-          "zIndex": 124,
+          "left": 1379,
+          "top": 423,
+          "zIndex": 377,
           "widthName": 60,
           "widthComment": 71.5703125,
           "color": "#795548"
         },
         "visible": true,
         "id": "81349459-e531-4c14-aa5f-9f385d3aae35"
+      },
+      {
+        "name": "cheapest_products",
+        "comment": "최저가 상품 테이블",
+        "columns": [
+          {
+            "name": "PRODUCT_ID",
+            "comment": "상품 아이디",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 79.28271484375,
+              "widthComment": 71.5703125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8c873f9a-5abb-493e-aa3d-fce9b3d550cb"
+          },
+          {
+            "name": "cheapest_product1",
+            "comment": "사이트 가격1",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 112.931640625,
+              "widthComment": 78.73046875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e75cf607-cdda-432b-a107-1ab7a0abeb26"
+          },
+          {
+            "name": "cheapest_image1",
+            "comment": "사이트 로고 이미지1",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 103.13720703125,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "bb827751-9c27-4251-b9be-0c38c063ad6a"
+          },
+          {
+            "name": "cheapest_product2",
+            "comment": "사이트 가격2",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 112.931640625,
+              "widthComment": 78.73046875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "536e3ec4-7f91-46a1-b3e3-d4d2f1e44763"
+          },
+          {
+            "name": "cheapest_image2",
+            "comment": "사이트 로고 이미지2",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 103.13720703125,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "91045511-29ca-4321-bd30-6345c4528f0b"
+          },
+          {
+            "name": "cheapest_product3",
+            "comment": "사이트 가격3",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 112.931640625,
+              "widthComment": 78.73046875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8bdc99c2-dde5-475e-a968-2b7125e28214"
+          },
+          {
+            "name": "cheapest_image3",
+            "comment": "사이트 로고 이미지3",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 103.13720703125,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a1f9b86c-a2ca-46ec-9ec4-04f21de6d34e"
+          },
+          {
+            "name": "cheapest_product4",
+            "comment": "사이트 가격4",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 112.931640625,
+              "widthComment": 78.73046875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6cbd8447-228a-4aae-b350-87e9dbdb0c32"
+          },
+          {
+            "name": "cheapest_image4",
+            "comment": "사이트 로고 이미지4",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 103.13720703125,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "887a4ec2-4ce3-4a30-9278-3bace830c437"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 789,
+          "top": 787,
+          "zIndex": 391,
+          "widthName": 111.40185546875,
+          "widthComment": 115.140625,
+          "color": "#3F51B5"
+        },
+        "visible": true,
+        "id": "c0912a7a-c8ac-47b5-9bc3-870b99a296ae"
       }
     ],
     "indexes": []
@@ -699,8 +969,8 @@
           "columnIds": [
             "b8897246-5a8c-4e59-a20b-ec1bf759af3f"
           ],
-          "x": 987.131591796875,
-          "y": 362,
+          "x": 1018.9658203125,
+          "y": 376,
           "direction": "top"
         },
         "constraintName": "fk_category_to_product",
@@ -716,17 +986,17 @@
           "columnIds": [
             "499880f3-93e1-4bd0-b879-01a1ae0efacf"
           ],
-          "x": 883.5657958984375,
-          "y": 574.5,
-          "direction": "bottom"
+          "x": 789,
+          "y": 566.125,
+          "direction": "left"
         },
         "end": {
           "tableId": "29452d51-f7d1-4d24-9cb6-08b00220e024",
           "columnIds": [
             "352096e7-c2ae-43f2-bef3-3e3be61c5956"
           ],
-          "x": 822.1015625,
-          "y": 695.75,
+          "x": 608.1015625,
+          "y": 657.75,
           "direction": "right"
         },
         "constraintName": "fk_product_to_review",
@@ -768,8 +1038,8 @@
           "columnIds": [
             "499880f3-93e1-4bd0-b879-01a1ae0efacf"
           ],
-          "x": 780,
-          "y": 468.25,
+          "x": 789,
+          "y": 439.375,
           "direction": "left"
         },
         "end": {
@@ -794,22 +1064,76 @@
           "columnIds": [
             "499880f3-93e1-4bd0-b879-01a1ae0efacf"
           ],
-          "x": 1090.6973876953125,
-          "y": 574.5,
-          "direction": "bottom"
+          "x": 1248.931640625,
+          "y": 502.75,
+          "direction": "right"
         },
         "end": {
           "tableId": "81349459-e531-4c14-aa5f-9f385d3aae35",
           "columnIds": [
             "b3c0a070-0e85-4465-9a58-266c66c5fbaf"
           ],
-          "x": 1150,
-          "y": 755,
+          "x": 1379,
+          "y": 478,
           "direction": "left"
         },
         "constraintName": "fk_product_to_tags",
         "visible": true,
         "id": "2c3db014-faf7-4e25-9060-3c38474b0972"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "86ffab59-46d2-45f5-8d8c-b4d26c94d006",
+          "columnIds": [
+            "499880f3-93e1-4bd0-b879-01a1ae0efacf"
+          ],
+          "x": 903.98291015625,
+          "y": 629.5,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "c0912a7a-c8ac-47b5-9bc3-870b99a296ae",
+          "columnIds": [
+            "8c873f9a-5abb-493e-aa3d-fce9b3d550cb"
+          ],
+          "x": 903.98291015625,
+          "y": 787,
+          "direction": "top"
+        },
+        "constraintName": "fk_product_to_cheapest_products",
+        "visible": true,
+        "id": "484b804d-9854-4d17-ae24-884d28c5b34b"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneOnly",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "c0912a7a-c8ac-47b5-9bc3-870b99a296ae",
+          "columnIds": [
+            "e75cf607-cdda-432b-a107-1ab7a0abeb26",
+            "bb827751-9c27-4251-b9be-0c38c063ad6a"
+          ],
+          "x": 1133.94873046875,
+          "y": 787,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "86ffab59-46d2-45f5-8d8c-b4d26c94d006",
+          "columnIds": [
+            "8629b180-cdcb-4a0d-b70e-2eef9e69f3fa",
+            "eeb73e21-ce39-467a-9896-d0c29f7c3faf"
+          ],
+          "x": 1133.94873046875,
+          "y": 629.5,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_cheapest_products_to_product",
+        "visible": true,
+        "id": "97abfa56-1bcd-4d59-8b27-30054185bfc0"
       }
     ]
   }
