@@ -4,7 +4,7 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": 0,
-    "scrollLeft": -31,
+    "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -143,7 +143,7 @@
           "active": false,
           "left": 174,
           "top": 98,
-          "zIndex": 81,
+          "zIndex": 100,
           "widthName": 60,
           "widthComment": 84.5703125,
           "color": "#FFC107"
@@ -407,7 +407,7 @@
           "active": false,
           "left": 780,
           "top": 362,
-          "zIndex": 93,
+          "zIndex": 112,
           "widthName": 60,
           "widthComment": 71.5703125,
           "color": "#009688"
@@ -537,9 +537,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 772,
-          "top": 735,
-          "zIndex": 62,
+          "left": 383,
+          "top": 610,
+          "zIndex": 115,
           "widthName": 60,
           "widthComment": 71.5703125,
           "color": "#03A9F4"
@@ -609,6 +609,69 @@
         },
         "visible": true,
         "id": "e1c63f53-a9d1-4ae9-8dbc-809a4eb3e3c4"
+      },
+      {
+        "name": "tags",
+        "comment": "태그 테이블",
+        "columns": [
+          {
+            "name": "PRODUCT_ID",
+            "comment": "상품 아이디",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 79.28271484375,
+              "widthComment": 71.5703125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b3c0a070-0e85-4465-9a58-266c66c5fbaf"
+          },
+          {
+            "name": "tag_name",
+            "comment": "태그명",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "bc336153-7a74-4f1e-b6bf-901f33bafa65"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1150,
+          "top": 700,
+          "zIndex": 124,
+          "widthName": 60,
+          "widthComment": 71.5703125,
+          "color": "#795548"
+        },
+        "visible": true,
+        "id": "81349459-e531-4c14-aa5f-9f385d3aae35"
       }
     ],
     "indexes": []
@@ -653,7 +716,7 @@
           "columnIds": [
             "499880f3-93e1-4bd0-b879-01a1ae0efacf"
           ],
-          "x": 987.131591796875,
+          "x": 883.5657958984375,
           "y": 574.5,
           "direction": "bottom"
         },
@@ -662,9 +725,9 @@
           "columnIds": [
             "352096e7-c2ae-43f2-bef3-3e3be61c5956"
           ],
-          "x": 991.55078125,
-          "y": 735,
-          "direction": "top"
+          "x": 822.1015625,
+          "y": 695.75,
+          "direction": "right"
         },
         "constraintName": "fk_product_to_review",
         "visible": true,
@@ -721,6 +784,32 @@
         "constraintName": "fk_product_to_likes",
         "visible": true,
         "id": "a21fde56-e020-4f64-888e-b92c0eedf8a7"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "86ffab59-46d2-45f5-8d8c-b4d26c94d006",
+          "columnIds": [
+            "499880f3-93e1-4bd0-b879-01a1ae0efacf"
+          ],
+          "x": 1090.6973876953125,
+          "y": 574.5,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "81349459-e531-4c14-aa5f-9f385d3aae35",
+          "columnIds": [
+            "b3c0a070-0e85-4465-9a58-266c66c5fbaf"
+          ],
+          "x": 1150,
+          "y": 755,
+          "direction": "left"
+        },
+        "constraintName": "fk_product_to_tags",
+        "visible": true,
+        "id": "2c3db014-faf7-4e25-9060-3c38474b0972"
       }
     ]
   }
