@@ -8,13 +8,14 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class JwtProvider {
 
-  private String secretKey = "S3cr3tK3y";
+  @Value("${secret-key}")
+  private String secretKey;
 
   public String create(String email) {
     Date expiredDate = Date.from(Instant.now().plus(1, ChronoUnit.HOURS));
