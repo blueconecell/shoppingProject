@@ -1,0 +1,35 @@
+.product-list-item {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  width: 220px;
+  height: 290px;
+
+  cursor: pointer;
+}
+
+.product-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.product-list-item-main-box {
+  flex: 1;
+  gap: 10px;
+}
+
+.product-list-item-top {
+  display: flex;
+  width: 200px;
+  height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-list-item-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

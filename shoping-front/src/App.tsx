@@ -1,8 +1,16 @@
 import React from "react";
-import './App.css'
+import "./App.css";
+import ProductItem from "./components/ProductItem";
+import { top3ProductListMock } from "mocks";
 
-export default function App() {
-  return <div>App</div>;
+function App() {
+  return (
+    <>
+      {top3ProductListMock.map((productList) => (
+        <ProductItem productListItem={productList} />
+      ))}
+    </>
+  );
 }
 
-export defulat App;
+export default App;
