@@ -2,7 +2,23 @@
   margin-top: 100px;
   height: 100vh;
 }
+header{
+  display: flex;
+  background-color: #5CFFD1;
+  padding: 30px 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo{
+  font-size: 40px;
+  font-weight: bold;
+}
+.header-profile{
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
 
+}
 .top-3-product {
   margin-top: 30px;
   padding: 0px 360px 0px 360px;

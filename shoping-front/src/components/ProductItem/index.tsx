@@ -23,6 +23,7 @@ export default function ProductItem({ productListItem }: Props) {
   //          render: Product List Item 컴포넌트 렌더링          //
   return (
     <div className="top-3-product-list-item" onClick={onClickHandler}>
+
       <div className="top-3-product-list-item-image-box">
         {/* <div
           className="top-3-product-list-item-image"
