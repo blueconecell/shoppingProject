@@ -40,8 +40,10 @@ export default function ProductItem({ productListItem }: Props) {
             <div className="top-3-product-list-item-price-value">{price}</div>
             <div className="top-3-product-list-item-price-unit"> 원</div>
           </div>
-          {isLike == null && (
+          {isLike ? (
             <div className="top-3-product-list-item-like">{"🤍"}</div>
+          ) : (
+            <div className="top-3-product-list-item-like">{"💛"}</div>
           )}
         </div>
       </div>

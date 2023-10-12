@@ -8,11 +8,11 @@ const top3ProductListMock: ProductListItem[] = [
     title: "코멧 순백 3겹 라벤더 바닐라 롤화장지 30m 30롤, 1팩",
     price: 13900,
     productImage:
-      "https://github.com/blueconecell/shoppingProject/blob/main/shoping-front/src/assets/images/%EB%A1%A4%ED%99%94%EC%9E%A5%EC%A7%80.jpg",
+      "https://github.com/blueconecell/shoppingProject/blob/main/shoping-front/src/assets/images/toilet-paper.jpg",
     productInfo: "",
     tagName: "휴지",
     viewCount: 0,
-    isLike: false,
+    isLike: true,
   },
   {
     productId: 0,
