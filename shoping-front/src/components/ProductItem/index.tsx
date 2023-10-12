@@ -24,12 +24,13 @@ export default function ProductItem({ productListItem }: Props) {
   return (
     <div className="top-3-product-list-item" onClick={onClickHandler}>
       <div className="top-3-product-list-item-image-box">
-        <div
+        {/* <div
           className="top-3-product-list-item-image"
           style={{
-            backgroundImage: `url(https://github.com/blueconecell/shoppingProject/blob/main/shoping-front/src/assets/images/%EB%A1%A4%ED%99%94%EC%9E%A5%EC%A7%80.jpg)`,
+            backgroundImage: `url(https://github.com/blueconecell/shoppingProject/blob/main/shoping-front/src/assets/images/%EB%A1%A4%ED%99%94%EC%9E%A5%EC%A7%80.jpg)`
           }}
-        ></div>
+        ></div> */}
+        <img className="top-3-product-list-item-image" src="https://raw.githubusercontent.com/blueconecell/shoppingProject/main/shoping-front/src/assets/images/toilet-paper.jpg" alt="" />
       </div>
       <div className="top-3-product-list-item-main-box">
         <div className="top-3-product-list-item-top">
