@@ -10,7 +10,7 @@ interface Props {
 //          component: Product List Item 컴포넌트           //
 export default function ProductItem({ productListItem }: Props) {
   //          properties           //
-  const { title, price, productImage, isLike } = productListItem;
+  const { title, price, isLike } = productListItem;
 
   //          fucntion: 네비게이트 함수          //
   // const navigator = useNavigate();
@@ -22,23 +22,26 @@ export default function ProductItem({ productListItem }: Props) {
 
   //          render: Product List Item 컴포넌트 렌더링          //
   return (
-    <div className="product-list-item" onClick={onClickHandler}>
-      <div className="product-list-item-image-box">
+    <div className="top-3-product-list-item" onClick={onClickHandler}>
+      <div className="top-3-product-list-item-image-box">
         <div
-          className="product-list-item-image"
+          className="top-3-product-list-item-image"
           style={{
-            backgroundImage: `url(${productImage ? productImage : null})})`,
+            backgroundImage: `url(https://github.com/blueconecell/shoppingProject/blob/main/shoping-front/src/assets/images/%EB%A1%A4%ED%99%94%EC%9E%A5%EC%A7%80.jpg)`,
           }}
         ></div>
       </div>
-      <div className="product-list-item-main-box">
-        <div className="product-list-item-top">
-          <div className="product-list-item-title">{title}</div>
+      <div className="top-3-product-list-item-main-box">
+        <div className="top-3-product-list-item-top">
+          <div className="top-3-product-list-item-title">{title}</div>
         </div>
-        <div className="product-list-item-bottom">
-          <div className="product-list-item-price">{price}</div>
+        <div className="top-3-product-list-item-bottom">
+          <div className="top-3-product-list-item-price">
+            <div className="top-3-product-list-item-price-value">{price}</div>
+            <div className="top-3-product-list-item-price-unit"> 원</div>
+          </div>
           {isLike == null && (
-            <div className="product-list-item-like">{"🤍"}</div>
+            <div className="top-3-product-list-item-like">{"🤍"}</div>
           )}
         </div>
       </div>

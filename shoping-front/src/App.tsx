@@ -6,9 +6,13 @@ import { top3ProductListMock } from "mocks";
 function App() {
   return (
     <>
-      {top3ProductListMock.map((productList) => (
-        <ProductItem productListItem={productList} />
-      ))}
+      <div className="main">
+        <div className="top-3-product-item">
+          {top3ProductListMock.map((productList) => (
+            <ProductItem productListItem={productList} />
+          ))}
+        </div>
+      </div>
     </>
   );
 }
