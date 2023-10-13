@@ -10,7 +10,7 @@ interface Props {
 //          component: Product List Item 컴포넌트           //
 export default function ProductItem({ productListItem }: Props) {
   //          properties           //
-  const { title, price, isLike } = productListItem;
+  const { title, price, isLike, productImage } = productListItem;
 
   //          fucntion: 네비게이트 함수          //
   // const navigator = useNavigate();
@@ -23,7 +23,6 @@ export default function ProductItem({ productListItem }: Props) {
   //          render: Product List Item 컴포넌트 렌더링          //
   return (
     <div className="top-3-product-list-item" onClick={onClickHandler}>
-
       <div className="top-3-product-list-item-image-box">
         {/* <div
           className="top-3-product-list-item-image"
@@ -31,7 +30,11 @@ export default function ProductItem({ productListItem }: Props) {
             backgroundImage: `url(https://github.com/blueconecell/shoppingProject/blob/main/shoping-front/src/assets/images/%EB%A1%A4%ED%99%94%EC%9E%A5%EC%A7%80.jpg)`
           }}
         ></div> */}
-        <img className="top-3-product-list-item-image" src="https://raw.githubusercontent.com/blueconecell/shoppingProject/main/shoping-front/src/assets/images/toilet-paper.jpg" alt="" />
+        <img
+          className="top-3-product-list-item-image"
+          src={productImage}
+          alt=""
+        />
       </div>
       <div className="top-3-product-list-item-main-box">
         <div className="top-3-product-list-item-top">
