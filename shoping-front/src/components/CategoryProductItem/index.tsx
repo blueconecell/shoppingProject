@@ -55,6 +55,33 @@ export default function CategoryProductItem({
                     {price}
                   </div>
                   <div className="category-product-list-item-price-unit">
+                    원
+                  </div>
+                </div>
+                {isLike ? (
+                  <div className="category-product-list-item-like">{"🤍"}</div>
+                ) : (
+                  <div className="category-product-list-item-like">{"💛"}</div>
+                )}
+              </div>
+            </div>
+            <div className="category-product-list-item-prodcut">
+              <div className="category-product-list-item-product-image-box">
+                <img
+                  className="category-product-list-item-product-image"
+                  src={productImage}
+                  alt=""
+                />
+              </div>
+              <div className="category-product-list-item-top">
+                <div className="category-product-list-item-title">{title}</div>
+              </div>
+              <div className="category-product-list-item-bottom">
+                <div className="category-product-list-item-price">
+                  <div className="category-product-list-item-price-value">
+                    {price}
+                  </div>
+                  <div className="category-product-list-item-price-unit">
                     {" "}
                     원
                   </div>
@@ -68,6 +95,34 @@ export default function CategoryProductItem({
             </div>
           </div>
           <div className="category-product-list-item-product-list-column">
+            <div className="category-product-list-item-prodcut">
+              <div className="category-product-list-item-product-image-box">
+                <img
+                  className="category-product-list-item-product-image"
+                  src={productImage}
+                  alt=""
+                />
+              </div>
+              <div className="category-product-list-item-top">
+                <div className="category-product-list-item-title">{title}</div>
+              </div>
+              <div className="category-product-list-item-bottom">
+                <div className="category-product-list-item-price">
+                  <div className="category-product-list-item-price-value">
+                    {price}
+                  </div>
+                  <div className="category-product-list-item-price-unit">
+                    {" "}
+                    원
+                  </div>
+                </div>
+                {isLike ? (
+                  <div className="category-product-list-item-like">{"🤍"}</div>
+                ) : (
+                  <div className="category-product-list-item-like">{"💛"}</div>
+                )}
+              </div>
+            </div>
             <div className="category-product-list-item-prodcut">
               <div className="category-product-list-item-product-image-box">
                 <img
