@@ -42,7 +42,8 @@ header {
   justify-content: space-between;
 }
 
-.top-3-product {
+.top-3-product,
+.category-product {
   margin-top: 30px;
   padding: 0px 360px 0px 360px;
 }

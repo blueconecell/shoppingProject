@@ -4,6 +4,7 @@ const top3ProductListMock: ProductListItem[] = [
   {
     productId: 0,
     categoryId: 0,
+    categoryName: "",
     categoryImage: "",
     title: "코멧 순백 3겹 라벤더 바닐라 롤화장지 30m 30롤, 1팩",
     price: 13900,
@@ -17,6 +18,7 @@ const top3ProductListMock: ProductListItem[] = [
   {
     productId: 0,
     categoryId: 0,
+    categoryName: "",
     categoryImage: "",
     title: "탐사수 무라벨 2L, 12개",
     price: 6590,
@@ -30,6 +32,7 @@ const top3ProductListMock: ProductListItem[] = [
   {
     productId: 0,
     categoryId: 0,
+    categoryName: "",
     categoryImage: "",
     title: "탐사 클래식 물티슈 캡형 100매, 20팩",
     price: 15290,
