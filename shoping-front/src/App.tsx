@@ -2,22 +2,14 @@ import React from "react";
 import "./App.css";
 import ProductItem from "./components/ProductItem";
 import CategoryProductItem from "components/CategoryProductItem";
+import HeaderGuest from "components/HeaderGuest";
 import { top3ProductListMock, categoryProductListMock } from "mocks";
 
 function App() {
   return (
     <>
       <div>
-        <header>
-          <div className="header-logo">Logo</div>
-          <div className="header-search-bar">
-            <div className="header-search-bar-button"></div>
-          </div>
-          <div className="header-profile">
-            <div className="header-login">로그인</div>
-            <div className="header-signin">회원가입</div>
-          </div>
-        </header>
+        <HeaderGuest  />
         <div className="main">
           <div className="top-3-product">
             <h1 className="top-3-product-title">금주의 Top 3 상품</h1>
