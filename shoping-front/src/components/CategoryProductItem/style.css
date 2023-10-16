@@ -1,6 +1,14 @@
-.category-product-list-item-category-image {
+.category-product-list-item-category-image-box{
   width: 260px;
   height: 570px;
+  background-color: #0a0a23;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category-product-list-item-category-image {
+  width: 100%;
+  height: auto;
 }
 
 .category-product-list-item-main {
