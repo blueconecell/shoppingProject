@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-        <HeaderGuest  />
+        <HeaderGuest />
         <div className="main">
           <div className="top-3-product">
             <h1 className="top-3-product-title">금주의 Top 3 상품</h1>
