@@ -1,3 +1,7 @@
+.category-product-list-item {
+  margin-bottom: 50px;
+}
+
 .category-product-list-item-main {
   display: flex;
   flex-direction: row;
@@ -30,7 +34,7 @@
   gap: 30px;
 }
 
-.category-product-list-item-prodcut {
+.category-product-list-item-product {
   width: 180px;
   height: 248px;
 
@@ -86,8 +90,6 @@
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
-
-  margin: 0px;
 }
 
 .category-product-list-item-bottom {

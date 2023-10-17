@@ -8,12 +8,11 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 5px;
   gap: 10px;
-  margin: 10px;
+  padding: 10px;
 
-  width: 220px;
-  height: 290px;
+  width: 200px;
+  height: 270px;
 
   cursor: pointer;
 }
@@ -40,15 +39,13 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 120%;
-
-  margin: 0px;
 }
 
 .top-3-product-list-item-top {
   display: flex;
   width: 200px;
-  height: 40px;
-  padding-bottom: 5px;
+  height: 35px;
+  padding-bottom: 10px;
 }
 
 .top-3-product-list-item-bottom {

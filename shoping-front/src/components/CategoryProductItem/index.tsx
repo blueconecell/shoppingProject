@@ -38,7 +38,7 @@ export default function CategoryProductItem({
         </div>
         <div className="category-product-list-item-product-list">
           <div className="category-product-list-item-product-list-column">
-            <div className="category-product-list-item-prodcut">
+            <div className="category-product-list-item-product">
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
@@ -65,7 +65,7 @@ export default function CategoryProductItem({
                 )}
               </div>
             </div>
-            <div className="category-product-list-item-prodcut">
+            <div className="category-product-list-item-product">
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
@@ -95,7 +95,7 @@ export default function CategoryProductItem({
             </div>
           </div>
           <div className="category-product-list-item-product-list-column">
-            <div className="category-product-list-item-prodcut">
+            <div className="category-product-list-item-product">
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
@@ -123,7 +123,7 @@ export default function CategoryProductItem({
                 )}
               </div>
             </div>
-            <div className="category-product-list-item-prodcut">
+            <div className="category-product-list-item-product">
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
