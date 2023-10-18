@@ -1,5 +1,4 @@
 .main {
-  margin-top: 30px;
   height: 100vh;
   display: flex;
   align-items: flex-start;
@@ -10,20 +9,7 @@
   width: 720px;
   margin: 30px;
 }
-.category-list{
-  width: 230px;
-  height: 410px;
-  padding: 30px 60px;
-  display: flex;
-  flex-direction: column;
-  
-}
-/* .top-3-product,
-.category-product {
-  margin-top: 30px;
-  padding: 0px 360px 0px 360px;
-  width: 720px;
-} */
+
 
 .top-3-product-title {
   margin-bottom: 25px;

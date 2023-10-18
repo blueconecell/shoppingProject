@@ -5,9 +5,10 @@ import "./App.css";
 import HeaderGuest from "components/HeaderGuest";
 import ProductItem from "./components/ProductItem";
 import CategotyList from "components/CategoryList";
+import PopularKeyword from "components/PopularKeyword";
 import CategoryProductItem from "components/CategoryProductItem";
 
-import { top3ProductListMock, categoryProductListMock } from "mocks";
+import { top3ProductListMock, categoryProductListMock, popularKeywordListMock } from "mocks";
 
 function App() {
   return (
@@ -38,7 +39,12 @@ function App() {
             </div>
           </div>
           </div>
-          
+          <div className="popular-keyword">
+            {popularKeywordListMock.map((popularKeywordList) => (
+              <PopularKeyword popularKeywordList={popularKeywordList}/>
+            ))}
+            
+          </div>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-.category-list-box{
+.popular-keyword-box{
     width: 230px;
     height: 410px;
     display: flex;
@@ -12,13 +12,14 @@
     border-color: #BABABA80;
     align-items: center;
   }
-.category-list-title{
+.popular-keyword-title{
+    width: 148px;
     height: 36px;
     font-size: 30px;
     font-weight: bolder;
     text-align: center;
 }
-.category-list-content{
+.popular-keyword-content{
     height: 19px;
     font-size: 16px;
     font-weight: 400;
