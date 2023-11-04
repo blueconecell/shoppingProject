@@ -6,18 +6,18 @@ import { ProductListItem } from "types/interface";
 interface Props {
 }
 
-//          component: Category Product List Item 컴포넌트          //
+//          component:           //
 export default function HeaderGuest({
 }: Props) {
   //          properties          //
 
 
-  //          event handler: 카테고리 상품 클릭 이벤트 처리 함수          //
+  //          event handler:     //
   const onClickHandler = () => {
     //
   };
 
-  //          render: Category Product List Item 컴포넌트 렌더링          //
+  //          render: header 컴포넌트 렌더링          //
   return (
     <div className="header-main">
       <div className="header-logo">Logo</div>
