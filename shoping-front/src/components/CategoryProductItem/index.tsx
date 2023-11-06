@@ -11,7 +11,7 @@ interface Props {
 export default function CategoryProductItem({
   categoryProductListItem,
 }: Props) {
-  //          properties          //
+  //          interface: Properties          //
   const { productId, categoryId, categoryImage, categoryName } =
     categoryProductListItem;
   const { title, price, productImage } = categoryProductListItem;

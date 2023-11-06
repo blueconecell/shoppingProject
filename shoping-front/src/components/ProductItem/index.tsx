@@ -9,7 +9,7 @@ interface Props {
 
 //          component: Product List Item 컴포넌트           //
 export default function ProductItem({ productListItem }: Props) {
-  //          properties           //
+  //          interface: Properties          //
   const { title, price, isLike, productImage } = productListItem;
 
   //          fucntion: 네비게이트 함수          //
