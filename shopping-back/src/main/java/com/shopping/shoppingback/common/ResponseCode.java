@@ -7,9 +7,9 @@ public interface ResponseCode {
 
   // HTTP Status 400
   String VALIDATION_FAILED = "VF";
-  String DUPLICATE_EMAIL = "DE";
-  String DUPLICATE_NICKNAME = "DN";
-  String DUPLICATE_TEL_NUMBER = "DT";
+  String DUPLICATED_EMAIL = "DE";
+  String DUPLICATED_NICKNAME = "DN";
+  String DUPLICATED_TEL_NUMBER = "DT";
   String NOT_EXISTED_USER = "NU";
   String NOT_EXISTED_PRODUCT = "NEP";
 
