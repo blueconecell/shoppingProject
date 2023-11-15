@@ -23,17 +23,17 @@ public class SignUpRequestDto {
     private String password;
 
     @NotBlank
-    private String nickname;
+    private String userId;
 
-    @NotBlank @Pattern(regexp = "^[0-9]{11,13}$")
-    private String telNumber;
+    // @NotBlank @Pattern(regexp = "^[0-9]{11,13}$")
+    // private String telNumber;
 
-    @NotBlank
-    private String address;
+    // @NotBlank
+    // private String address;
 
-    private String addressDetail;
+    // private String addressDetail;
 
-    @NotNull @AssertTrue
-    private Boolean agreedPersonal;
+    // @NotNull @AssertTrue
+    // private Boolean agreedPersonal;
 
 }
