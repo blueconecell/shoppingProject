@@ -4,12 +4,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.shopping.shoppingback.dto.request.auth.SignInRequestDto;
 import com.shopping.shoppingback.dto.request.auth.SignUpRequestDto;
-import com.shopping.shoppingback.dto.response.auth.SignUpResponseDto;
 import com.shopping.shoppingback.dto.response.ResponseDto;
+import com.shopping.shoppingback.dto.response.auth.SignInResponseDto;
+import com.shopping.shoppingback.dto.response.auth.SignUpResponseDto;
 import com.shopping.shoppingback.entity.UserEntity;
+import com.shopping.shoppingback.provider.JwtProvider;
 import com.shopping.shoppingback.repository.UserRepository;
 import com.shopping.shoppingback.service.AuthService;
+
 import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
@@ -17,6 +22,7 @@ public class AuthServiceImplement implements AuthService{
     // 원래 아래 코드에서 final을 빼고 만들면 생성자들을 만들어줘야하는데
     // @RequiredArgsConstructor 어노테이션을 사용하고 final을 적용해주면 필요한 생성자를 알아서 만들어준다.
     private final UserRepository userRepository;
+    private final JwtProvider jwtProvider;
     
     // 이번엔 final 안쓰고 직접 의존성 주입해줄 것이다.
     private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -57,6 +63,32 @@ public class AuthServiceImplement implements AuthService{
             return ResponseDto.databaseError();
         }
         return SignUpResponseDto.success();
+    }
+
+    @Override
+    public ResponseEntity<? super SignInResponseDto> signIn(SignInRequestDto dto) {
+
+        String token = null;        
+
+        try{
+
+            String email = dto.getEmail();
+            UserEntity userEntity = userRepository.findByEmail(email);
+            if(userEntity == null) return SignInResponseDto.signInFail();
+
+            String password = dto.getPassword();
+            String encodedPassword = userEntity.getPassword();
+
+            boolean isMatched = passwordEncoder.matches(password, encodedPassword);
+            if(!isMatched) return SignInResponseDto.signInFail();
+
+            token = jwtProvider.create(email);
+
+        }catch(Exception exception){
+            exception.printStackTrace();
+            return ResponseDto.databaseError();
+        }
+    return SignInResponseDto.success(token);
     }
     
 }
