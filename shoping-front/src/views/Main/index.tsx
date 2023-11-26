@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.css'
 
-import HeaderGuest from "components/HeaderGuest";
 import ProductItem from "components/ProductItem";
 import CategotyList from "components/CategoryList";
 import PopularKeyword from "components/PopularKeyword";
@@ -16,7 +15,7 @@ export default function Main() {
   return (
     <>
       <div>
-        <HeaderGuest />
+
         <div className="main">
           <div className="category-list">
             <CategotyList/>

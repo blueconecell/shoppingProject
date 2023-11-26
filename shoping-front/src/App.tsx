@@ -1,59 +1,30 @@
 import "./App.css";
-
+import { Route, Routes } from 'react-router-dom';
 import Main from 'views/Main';
 import User from 'views/User';
 import Search from 'views/Search';
 import ProductDetail from 'views/Product/Detail';
 import Authentication from 'views/Authentication';
 
+import Container from 'layouts/Container';
 
-import HeaderGuest from "components/HeaderGuest";
-import ProductItem from "components/ProductItem";
-import CategotyList from "components/CategoryList";
-import PopularKeyword from "components/PopularKeyword";
-import CategoryProductItem from "components/CategoryProductItem";
-
-import { top3ProductListMock, categoryProductListMock, popularKeywordListMock } from "mocks";
+import { MAIN_PATH, AUTH_PATH, SEARCH_PATH, USER_PATH, PRODUCT_PATH, PRODUCT_DETAIL_PATH } from 'constant';
 
 function App() {
   return (
-    <>
-      <div>
-        <HeaderGuest />
-        <div className="main">
-          <div className="category-list">
-            <CategotyList/>
-          </div>
-          <div className="main-content">
-            <div className="top-3-product">
-            <h1 className="top-3-product-title">금주의 Top 3 상품</h1>
-            <div className="top-3-product-item">
-              {top3ProductListMock.map((productList) => (
-                <ProductItem productListItem={productList} />
-              ))}
-            </div>
-          </div>
-          <div className="category-product">
-            <h1 className="category-product-title">카테고리별 상품</h1>
-            <div className="category-product-item">
-              {categoryProductListMock.map((categoryProductList) => (
-                <CategoryProductItem
-                  categoryProductListItem={categoryProductList}
-                />
-              ))}
-            </div>
-          </div>
-          </div>
-          <div className="popular-keyword">
-            {popularKeywordListMock.map((popularKeywordList) => (
-              <PopularKeyword popularKeywordList={popularKeywordList}/>
-            ))}
-            
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    <Routes>
+      <Route element={<Container/>}>
+        <Route path={MAIN_PATH()} element={<Main />}/>
+        <Route path={AUTH_PATH()} element={<Authentication />}/>
+        <Route path={SEARCH_PATH(":searchWord")} element={<Search />}/>
+        <Route path={USER_PATH(":userEmail")} element={<User />}/>
+        <Route path={PRODUCT_PATH()}>
+          <Route path={PRODUCT_DETAIL_PATH(":boardNumber")} element={<ProductDetail />}/>
+        </Route>
+        <Route path='*' element={<h1>404 Not Found</h1>}/>
+      </Route>
+    </Routes>
+      );
 }
 
 export default App;
