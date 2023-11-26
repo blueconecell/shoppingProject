@@ -1,11 +1,5 @@
-import "./App.css";
-
-import Main from 'views/Main';
-import User from 'views/User';
-import Search from 'views/Search';
-import ProductDetail from 'views/Product/Detail';
-import Authentication from 'views/Authentication';
-
+import React from 'react'
+import './style.css'
 
 import HeaderGuest from "components/HeaderGuest";
 import ProductItem from "components/ProductItem";
@@ -15,7 +9,10 @@ import CategoryProductItem from "components/CategoryProductItem";
 
 import { top3ProductListMock, categoryProductListMock, popularKeywordListMock } from "mocks";
 
-function App() {
+// component: 메인 화면 컴포넌트
+export default function Main() {
+
+  // render: 메인 화면 컴포넌트 렌더링
   return (
     <>
       <div>
@@ -53,7 +50,5 @@ function App() {
         </div>
       </div>
     </>
-  );
+  )
 }
-
-export default App;
