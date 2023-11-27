@@ -8,8 +8,7 @@ const top3ProductListMock: ProductListItem[] = [
     categoryImage: "",
     title: "코멧 순백 3겹 라벤더 바닐라 롤화장지 30m 30롤, 1팩",
     price: 13900,
-    productImage:
-      "https://raw.githubusercontent.com/blueconecell/shoppingProject/main/shoping-front/src/assets/images/toilet-paper.jpg",
+    productImage:"../assets/image/toilet-paper.jpg",
     productInfo: "",
     tagName: "휴지",
     viewCount: 0,
@@ -23,7 +22,7 @@ const top3ProductListMock: ProductListItem[] = [
     title: "탐사수 무라벨 2L, 12개",
     price: 6590,
     productImage:
-      "https://raw.githubusercontent.com/blueconecell/shoppingProject/main/shoping-front/src/assets/images/%EB%AC%BC.jpg",
+      "../assets/image/물.jpg",
     productInfo: "",
     tagName: "물",
     viewCount: 0,
@@ -37,7 +36,7 @@ const top3ProductListMock: ProductListItem[] = [
     title: "탐사 클래식 물티슈 캡형 100매, 20팩",
     price: 15290,
     productImage:
-      "https://raw.githubusercontent.com/blueconecell/shoppingProject/main/shoping-front/src/assets/images/%EB%AC%BC%ED%8B%B0%EC%8A%88.jpg",
+    "../assets/image/물티슈.jpg",
     productInfo: "",
     tagName: "물티슈",
     viewCount: 0,
