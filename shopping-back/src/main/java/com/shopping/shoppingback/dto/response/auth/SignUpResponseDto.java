@@ -36,10 +36,11 @@ public class SignUpResponseDto extends ResponseDto{
     }
 
     // 3. 중복된 전화번호의 경우
-    public static ResponseEntity<ResponseDto> duplicatedTelNumber(){
-        ResponseDto result = new ResponseDto(ResponseCode.DUPLICATED_TEL_NUMBER, ResponseMessage.DUPLICATED_TEL_NUMBER);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result);
-    }
+    
+    // public static ResponseEntity<ResponseDto> duplicatedTelNumber(){
+    //     ResponseDto result = new ResponseDto(ResponseCode.DUPLICATED_TEL_NUMBER, ResponseMessage.DUPLICATED_TEL_NUMBER);
+    //     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result);
+    // }
     // 이렇게 만들게 되면 백엔드에서 DTO를 만들어주게 된 것이다. 이제 프론트를 만들어야한다.
     // 프론트 apis에 만들기시작
 }

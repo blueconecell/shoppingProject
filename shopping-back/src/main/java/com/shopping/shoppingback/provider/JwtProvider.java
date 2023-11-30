@@ -14,34 +14,29 @@ import org.springframework.stereotype.Component;
 @Component
 public class JwtProvider {
 
-  @Value("${secret-key}")
-  private String secretKey;
+    @Value("${secret-key}")
+    private String secretKey;
+    
+    public String create(String email){
+        // java.util 의 자동완성으로 Date를 불러와 1시간 만료기간을 만들어준다.
+        Date expireDate = Date.from(Instant.now().plus(1,ChronoUnit.HOURS));
+        //jwt생성
+        String jwt = Jwts.builder()
+            .signWith(SignatureAlgorithm.HS256,secretKey)
+            .setSubject(email).setIssuedAt(new Date()).setExpiration(expireDate)
+            .compact();
 
-  public String create(String email) {
-    Date expiredDate = Date.from(Instant.now().plus(1, ChronoUnit.HOURS));
-  
-    String jwt = Jwts.builder()
-      .signWith(SignatureAlgorithm.HS256, secretKey)
-      .setSubject(email).setIssuedAt(new Date()).setExpiration(expiredDate)
-      .compact();
-
-    return jwt;
-  }
-
-  public String validate(String jwt) {
-
-    Claims claims = null;
-
-    try {
-      claims = Jwts.parser().setSigningKey(secretKey)
-        .parseClaimsJws(jwt).getBody();
-    } catch (Exception exception) {
-      exception.printStackTrace();
-      return null;
+        return jwt;
     }
-
-    return claims.getSubject();
-
-  }
-
+    public String validate(String jwt){
+        Claims claims = null;
+        try {
+            claims = Jwts.parser().setSigningKey(secretKey)
+                .parseClaimsJws(jwt).getBody();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+            return null;
+        }
+        return claims.getSubject();
+    }
 }
