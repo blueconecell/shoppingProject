@@ -14,7 +14,7 @@ public interface UserRepository extends JpaRepository<UserEntity, String>{
     // SQL문을 알아서 만들어서 알아서 실행해준다.
     // existsBy 이부분 오타주의
     boolean existsByEmail(String email);
-    boolean existsByUserId(String USER_ID);
+    boolean existsByNickname(String nickname);
     // boolean existsByTelNumber(String telNumber);
 
     UserEntity findByEmail(String email);

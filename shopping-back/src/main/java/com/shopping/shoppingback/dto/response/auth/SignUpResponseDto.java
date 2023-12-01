@@ -30,8 +30,8 @@ public class SignUpResponseDto extends ResponseDto{
     }
     
     // 2. 중복된 닉네임의 경우
-    public static ResponseEntity<ResponseDto> duplicatedUSER_ID(){
-        ResponseDto result = new ResponseDto(ResponseCode.DUPLICATED_USER_ID, ResponseMessage.DUPLICATED_USER_ID);
+    public static ResponseEntity<ResponseDto> duplicatedNickname(){
+        ResponseDto result = new ResponseDto(ResponseCode.DUPLICATED_NICKNAME, ResponseMessage.DUPLICATED_NICKNAME);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result);
     }
 

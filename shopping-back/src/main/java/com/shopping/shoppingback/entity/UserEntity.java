@@ -14,15 +14,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-// entity를 사용할 것이디. 이름은 USER_ID 이다
-@Entity(name="USER_ID")
+// entity를 사용할 것이디. 이름은 nickname 이다
+@Entity(name="nickname")
 
 // 객체인 class와 table을 매핑시켜야한다.
 @Table(name = "user")
 public class UserEntity {
 
     @Id
-    private String userId;
+    private String nickname;
     private String email;
     private String password;
     private String profile_image;
@@ -34,7 +34,7 @@ public class UserEntity {
     // 간단하게 entity를 만들어줄 수 있는데. 만들게되면 리포지토리를 추가해줘야함
     
     public UserEntity(SignUpRequestDto dto){
-        this.userId = dto.getUserId();
+        this.nickname = dto.getNickname();
         this.email = dto.getEmail();
         this.password = dto.getPassword();
         
