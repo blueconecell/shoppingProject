@@ -133,9 +133,13 @@
 
 .eye-light-off-icon {
   background-image: url(assets/image/eye-light-off.png);
+  width: 24px;
+  height: 24px;
 }
 .eye-light-on-icon {
   background-image: url(assets/image/eye-light-on.png);
+  width: 24px;
+  height: 24px;
 }
 .expand-right-light-icon {
   background-image: url(assets/image/expand-right-light.png);
