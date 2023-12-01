@@ -14,7 +14,10 @@ export default function CategoryProductItem({
   //          interface: Properties          //
   const { productId, categoryId, categoryImage, categoryName } =
     categoryProductListItem;
-  const { title, price, productImage } = categoryProductListItem;
+  const { productImage1, productImage2, productImage3, productImage4 } =
+    categoryProductListItem;
+  const { title1, title2, title3, title4 } = categoryProductListItem;
+  const { price1, price2, price3, price4 } = categoryProductListItem;
   const { tagName, viewCount, isLike } = categoryProductListItem;
 
   //          event handler: 카테고리 상품 클릭 이벤트 처리 함수          //
@@ -42,17 +45,17 @@ export default function CategoryProductItem({
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
-                  src={productImage}
+                  src={productImage1}
                   alt=""
                 />
               </div>
               <div className="category-product-list-item-top">
-                <div className="category-product-list-item-title">{title}</div>
+                <div className="category-product-list-item-title">{title1}</div>
               </div>
               <div className="category-product-list-item-bottom">
                 <div className="category-product-list-item-price">
                   <div className="category-product-list-item-price-value">
-                    {price}
+                    {price1}
                   </div>
                   <div className="category-product-list-item-price-unit">
                     원
@@ -69,17 +72,17 @@ export default function CategoryProductItem({
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
-                  src={productImage}
+                  src={productImage2}
                   alt=""
                 />
               </div>
               <div className="category-product-list-item-top">
-                <div className="category-product-list-item-title">{title}</div>
+                <div className="category-product-list-item-title">{title2}</div>
               </div>
               <div className="category-product-list-item-bottom">
                 <div className="category-product-list-item-price">
                   <div className="category-product-list-item-price-value">
-                    {price}
+                    {price2}
                   </div>
                   <div className="category-product-list-item-price-unit">
                     {" "}
@@ -99,17 +102,17 @@ export default function CategoryProductItem({
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
-                  src={productImage}
+                  src={productImage3}
                   alt=""
                 />
               </div>
               <div className="category-product-list-item-top">
-                <div className="category-product-list-item-title">{title}</div>
+                <div className="category-product-list-item-title">{title3}</div>
               </div>
               <div className="category-product-list-item-bottom">
                 <div className="category-product-list-item-price">
                   <div className="category-product-list-item-price-value">
-                    {price}
+                    {price3}
                   </div>
                   <div className="category-product-list-item-price-unit">
                     {" "}
@@ -127,17 +130,17 @@ export default function CategoryProductItem({
               <div className="category-product-list-item-product-image-box">
                 <img
                   className="category-product-list-item-product-image"
-                  src={productImage}
+                  src={productImage4}
                   alt=""
                 />
               </div>
               <div className="category-product-list-item-top">
-                <div className="category-product-list-item-title">{title}</div>
+                <div className="category-product-list-item-title">{title4}</div>
               </div>
               <div className="category-product-list-item-bottom">
                 <div className="category-product-list-item-price">
                   <div className="category-product-list-item-price-value">
-                    {price}
+                    {price4}
                   </div>
                   <div className="category-product-list-item-price-unit">
                     {" "}

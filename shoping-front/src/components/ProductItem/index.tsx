@@ -10,7 +10,10 @@ interface Props {
 //          component: Product List Item 컴포넌트           //
 export default function ProductItem({ productListItem }: Props) {
   //          interface: Properties          //
-  const { title, price, isLike, productImage } = productListItem;
+  const { price1, price2, price3, price4, isLike } = productListItem;
+  const { title1, title2, title3, title4 } = productListItem;
+  const { productImage1, productImage2, productImage3, productImage4 } =
+    productListItem;
 
   //          fucntion: 네비게이트 함수          //
   // const navigator = useNavigate();
@@ -32,17 +35,17 @@ export default function ProductItem({ productListItem }: Props) {
         ></div> */}
         <img
           className="top-3-product-list-item-image"
-          src={productImage}
+          src={productImage1}
           alt=""
         />
       </div>
       <div className="top-3-product-list-item-main-box">
         <div className="top-3-product-list-item-top">
-          <div className="top-3-product-list-item-title">{title}</div>
+          <div className="top-3-product-list-item-title">{title1}</div>
         </div>
         <div className="top-3-product-list-item-bottom">
           <div className="top-3-product-list-item-price">
-            <div className="top-3-product-list-item-price-value">{price}</div>
+            <div className="top-3-product-list-item-price-value">{price1}</div>
             <div className="top-3-product-list-item-price-unit"> 원</div>
           </div>
           {isLike ? (
