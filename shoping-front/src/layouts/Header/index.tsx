@@ -211,9 +211,8 @@ export default function Header() {
       <div className="header-container">
         <div className="header-left-box" onClick={onLogoClickHandler}>
           <div className="icon-box">
-            <div className="icon logo-dark-icon"></div>
+            <div className="brand-logo"></div>
           </div>
-          <div className="header-logo"></div>
         </div>
         <div className="header-right-box">
           {(isAuthPage ||
