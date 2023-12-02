@@ -23,7 +23,7 @@ const categoryProductListMock: ProductListItem[] = [
       "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1656206318725660-45ae0008-89c9-4fd0-878d-09b1e66c7a5b.jpg",
     productImage4:
       "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2503748766576084-08b80611-aea6-447f-8691-13170a564fa7.jpg",
-    productInfo1: "",
+    productInfo1: "https://www.coupang.com/vp/products/261192458?itemId=816702952&vendorItemId=5077941266&src=1032034&spec=10305197&addtag=400&ctag=261192458&lptag=I816702952&itime=20231202150225&pageType=PRODUCT&pageValue=261192458&wPcid=19800813108875055932084&wRef=prod.danawa.com&wTime=20231202150225&redirect=landing&mcid=9baa2a9abf7448d9bb8833a5bcbe14c8&isAddedCart=",
     productInfo2: "",
     productInfo3: "",
     productInfo4: "",

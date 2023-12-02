@@ -51,14 +51,6 @@ function App() {
   }, [cookies.accessToken]);
 
 
-
-
-
-
-
-
-
-
   return (
     <Routes>
       <Route element={<Container/>}>
