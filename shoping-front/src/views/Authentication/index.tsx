@@ -59,7 +59,7 @@ export default function Authentication() {
       // 현재시간은 밀리세컨드이기 때문에 1000곱하기 -> 만료시간 계산해주기
       const expires = new Date(now + expirationTime * 1000);
 
-      setCookie("accesToken", token, { expires, path: MAIN_PATH() });
+      setCookie("accessToken", token, { expires, path: MAIN_PATH() });
       navigator(MAIN_PATH());
     };
     // event handler: 이메일 변경 이벤트 처리
@@ -311,7 +311,7 @@ export default function Authentication() {
     };
     // event handler: 회원가입 버튼 클릭 이벤트 처리
     const onSignUpButtonClickHandler = () => {
-      alert("회원가입 버튼!");
+      // alert("회원가입 버튼!");
       const emailPattern = /^[a-zA-Z0-9]*@([-.]?[a-zA-Z0-9])*\.[a-zA-Z]{2,4}$/;
       const isEmailPattern = emailPattern.test(email);
       if (!isEmailPattern) {
@@ -321,7 +321,7 @@ export default function Authentication() {
       const isCheckedPassword = password.trim().length >= 8;
       if (!isCheckedPassword) {
         setPasswordError(true);
-        setPasswordErrorMessage("비밀번호는 8자 이상 입력22222이해주세요");
+        setPasswordErrorMessage("비밀번호는 8자 이상 입력해주세요");
       }
       const isEqualPassword = password === passwordCheck;
       if (!isEqualPassword) {

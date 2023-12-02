@@ -132,12 +132,13 @@ export default function Header() {
     const onMyPageButtonClickHandler = () => {
       if (!loginUser) return;
       const { email } = loginUser;
-      navigate(USER_PATH(""));
+      navigate(USER_PATH(email));
     };
 
-    // event handler: 마이페이지 버튼 클릭 이벤트 처리 함수
+    // event handler: 로그아웃 버튼 클릭 이벤트 처리 함수
     const onSignOutButtonClickHandler = () => {
       resetLoginUser();
+      setCookie('accessToken', '', {path: MAIN_PATH(), expires: new Date()});
       navigate(MAIN_PATH());
     };
 
@@ -203,7 +204,14 @@ export default function Header() {
     setProductDetailPage(isProductDetailPage);
     const isUserPage = pathname.startsWith(USER_PATH(""));
     setUserPage(isUserPage);
-  });
+  },[pathname]);
+
+  // effect: login user가 변경될 때마다 실행되는 함수
+  useEffect(() => {
+    setLogin(loginUser !== null);
+    console.log('로그인유저가 변경될 때마다 실행되는 함수 !')
+    console.log('loginUser',loginUser)
+  }, [loginUser])
 
   // render: 헤더 레이아웃 렌더링
   return (
