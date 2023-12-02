@@ -1,11 +1,12 @@
+
 import './style.css'
 
-import ProductItem from "components/ProductItem";
+import ProductItem from "components/ProductItem/test";
 import CategotyList from "components/CategoryList";
 import PopularKeyword from "components/PopularKeyword";
 import CategoryProductItem from "components/CategoryProductItem";
 
-import { top3ProductListMock, categoryProductListMock, popularKeywordListMock } from "mocks";
+import { top3ProductListMock,top3ProductListMock_test, categoryProductListMock, popularKeywordListMock } from "mocks";
 
 // component: 메인 화면 컴포넌트
 export default function Main() {
@@ -23,7 +24,7 @@ export default function Main() {
             <div className="top-3-product">
             <h1 className="top-3-product-title">금주의 Top 3 상품</h1>
             <div className="top-3-product-item">
-              {top3ProductListMock.map((productList) => (
+              {top3ProductListMock_test.map((productList) => (
                 <ProductItem productListItem={productList} />
               ))}
             </div>
