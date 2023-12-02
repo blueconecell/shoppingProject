@@ -28,7 +28,7 @@ export default function ProductItem({ productListItem }: Props) {
   const imageClickHandler = () => {
     window.location.href = productInfo
   };
-  // event handler: 
+  // event handler: 좋아요 버튼 클릭 핸들러
   const isLikeClickHandler = () =>{
     if(!loginUser){
       alert("로그인 필요!")
