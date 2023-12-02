@@ -11,3 +11,9 @@
     flex-basis: calc(50% - 10px);  /* 2x2 모양을 위해 각각의 flex item이 50%의 너비를 갖도록 설정 */
     margin: 5px;  /* 간격을 주기 위한 마진 설정 */
 }
+.category-product-list-item-category-image-box{
+    min-width: 250px;
+}
+.category-product-item{
+    min-width: 500px;
+}
