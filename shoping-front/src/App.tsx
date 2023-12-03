@@ -59,7 +59,7 @@ function App() {
         <Route path={SEARCH_PATH(":searchWord")} element={<Search />}/>
         <Route path={USER_PATH(":userEmail")} element={<UserP />}/>
         <Route path={PRODUCT_PATH()}>
-          <Route path={PRODUCT_DETAIL_PATH(":boardNumber")} element={<ProductDetail />}/>
+          <Route path={PRODUCT_DETAIL_PATH(":ProductNumber")} element={<ProductDetail />}/>
         </Route>
         <Route path='*' element={<h1>404 Not Found</h1>}/>
       </Route>
