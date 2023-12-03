@@ -4,7 +4,9 @@
   align-items: flex-start;
   justify-content: center;
 }
-
+:root {
+  --conceptColor: #5cffd18c;
+}
 .main-content {
   width: 720px;
   margin: 30px;

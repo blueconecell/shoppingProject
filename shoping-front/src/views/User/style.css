@@ -1,0 +1,21 @@
+.user-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.user-card-email, .user-card-nickname{
+    display: flex;
+    margin: 20px;
+    background-color: var(--conceptColor);
+    width: 800px;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    
+}
